@@ -6,7 +6,6 @@
         <groupId>com.hy</groupId>
         <artifactId>SpringLearning</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hy</groupId>
     <artifactId>dubbo-learning</artifactId>
@@ -16,27 +15,14 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>11</java.version>
+        <dubbo.version>2.7.7.RELEASE</dubbo.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
+<modules>
+    <module>producer</module>
+    <module>consumer</module>
+    <module>common-api</module>
+</modules>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

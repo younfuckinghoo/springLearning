@@ -1,0 +1,2 @@
+HyDubboConsumerTraceFilter = com.hy.producer.filter.HyDubboConsumerTraceFilter
+HyDubboProviderTraceFilter = com.hy.producer.filter.HyDubboProviderTraceFilter
