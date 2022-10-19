@@ -1,13 +1,13 @@
-package com.hy.springlearning;
+package com.hy.iolearning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringLearningApplication {
+public class IoLearningApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringLearningApplication.class, args);
+        SpringApplication.run(IoLearningApplication.class, args);
     }
 
 }
