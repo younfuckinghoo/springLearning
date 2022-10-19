@@ -1,7 +1,6 @@
-package com.hy.springlearning.controller;
+package com.hy.iolearning.controller;
 
 import org.apache.tomcat.util.http.MimeHeaders;
-import org.springframework.util.MimeType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
-import java.util.Map;
 
 @RestController
 @RequestMapping("io")
