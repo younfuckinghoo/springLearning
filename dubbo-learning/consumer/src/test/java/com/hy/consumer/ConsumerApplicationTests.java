@@ -1,10 +1,10 @@
-package com.example.commonapi;
+package com.hy.consumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CommonApiApplicationTests {
+class ConsumerApplicationTests {
 
     @Test
     void contextLoads() {
