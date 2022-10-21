@@ -24,7 +24,7 @@ public class IOController {
 
     @GetMapping("img")
     public void download(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String pngPath = "D:\\noah\\ycl\\file\\qrcode\\toBiliBili.png";
+        String pngPath = "D:\\noah\\ycl\\file\\qrcode\\tupian1.png";
         File file = new File(pngPath);
         if (file.exists()){
             FileInputStream fileOutputStream = new FileInputStream(file);
