@@ -5,6 +5,9 @@ import com.hy.basejava.util.FileUtil;
 import java.io.*;
 import java.util.*;
 
+/**
+ * the thread can listen the change of files which belong the path of pngPath;
+ */
 public class FileWatcherThread implements Runnable{
 
     static String pngPath = "D:\\noah\\ycl\\file\\qrcode";
