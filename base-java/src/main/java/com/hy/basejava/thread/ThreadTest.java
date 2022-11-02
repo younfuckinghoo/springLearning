@@ -70,7 +70,6 @@ public class ThreadTest {
             if (current<=1){
                 myLogger.info("counting down....current<1...."+current);
                 thread.resume();
-                thread.stop();
             return;
             }
 //            try {
