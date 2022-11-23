@@ -43,18 +43,16 @@ public class FileWatcherThread implements Runnable{
 
     private void setFileByteArray(String key ,File newFile) {
         try {
+
             FileInputStream newFileInput = new FileInputStream(newFile);
         byte[] newByteBuff = new byte[1024];
-        byte[] newBytes = new byte[0];
-            int newRead = 0,newLength = 0;
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+
+            int newRead = 0;
             while ((newRead = newFileInput.read(newByteBuff)) > 0) {
-                newLength+=newRead;
-                byte[] newBytesNew = new byte[newLength];
-                System.arraycopy(newBytes,0,newBytesNew,0,newLength-newRead);
-                System.arraycopy(newByteBuff,0,newBytesNew,newLength-newRead,newRead);
-                newBytes = newBytesNew;
+                byteArrayOutputStream.write(newByteBuff,0,newRead);
             }
-            ALL_FILE_MAP.put(key,newBytes);
+            ALL_FILE_MAP.put(key,byteArrayOutputStream.toByteArray());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

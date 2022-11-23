@@ -49,6 +49,8 @@ public class CodeGenerate {
             StringBuilder sqlStr = new StringBuilder("CREATE TABLE  "+nameArr[0]+"  \n" +
                     "   (");
             StringBuilder sqlCommentStr = new StringBuilder();
+            StringBuilder mapperStr = new StringBuilder("");
+            StringBuilder baseColumnSqlStr = new StringBuilder("");
             StringBuffer jsonStr = new StringBuffer("{");
             StringBuffer classStr = new StringBuffer("package com.noah.mes.craft.entity;\n" +
                     "import lombok.AllArgsConstructor;\n" +
@@ -72,6 +74,8 @@ public class CodeGenerate {
                     "public class "+ StrUtil.toCamelCase(nameArr[0])+"  implements Serializable {\n" +
                     " private static final long serialVersionUID = 1L;\n");
             List<String> pk = new ArrayList<>();
+            mapperStr.append(nameArr[0]+"\n");
+            baseColumnSqlStr.append(nameArr[0]+"\n");
 
             for (String row : rows) {
                 String[] cols = row.split("\t");
@@ -108,6 +112,8 @@ public class CodeGenerate {
                 }
                 sqlStr.append(cols[0]+" "+cols[2]+" "+notNull+",\n");
                 sqlCommentStr.append("comment on column "+nameArr[0]+"."+cols[0]+" is '"+cols[1]+"';\n");
+                baseColumnSqlStr.append(cols[0]+",");
+                mapperStr.append(String.format("<result property=\"%1$s\" column=\"%2$s\" jdbcType=\"%3$s\"/>\n",StrUtil.toCamelCase(cols[0].toLowerCase()),cols[0],jdbcType));
             }
             classStr.append("}");
             jsonStr.append("}");
@@ -118,23 +124,25 @@ public class CodeGenerate {
 //            System.out.println(classStr.toString());
 //            System.out.println(jsonStr.toString());
 //            System.out.println(sqlStr.toString());
+            System.out.println(mapperStr.toString());
+            System.out.println(baseColumnSqlStr.toString());
 
 
-            File javaFile = new File(javaDIr, StrUtil.toCamelCase(nameArr[0]) + ".java");
-            File jsonFile = new File(jsonDIr, StrUtil.toCamelCase(nameArr[0])+ ".json");
-            File sqlFile = new File(sqlDIr, nameArr[0]+ ".sql");
-            FileWriter javaFileWriter = new FileWriter(javaFile);
-            javaFileWriter.write(classStr.toString());
-            javaFileWriter.flush();
-            javaFileWriter.close();
-            FileWriter jsonFileWriter = new FileWriter(jsonFile);
-            jsonFileWriter.write(jsonStr.toString());
-            jsonFileWriter.flush();
-            jsonFileWriter.close();
-            FileWriter sqlFileWriter = new FileWriter(sqlFile);
-            sqlFileWriter.write(sqlStr.toString());
-            sqlFileWriter.flush();
-            sqlFileWriter.close();
+//            File javaFile = new File(javaDIr, StrUtil.toCamelCase(nameArr[0]) + ".java");
+//            File jsonFile = new File(jsonDIr, StrUtil.toCamelCase(nameArr[0])+ ".json");
+//            File sqlFile = new File(sqlDIr, nameArr[0]+ ".sql");
+//            FileWriter javaFileWriter = new FileWriter(javaFile);
+//            javaFileWriter.write(classStr.toString());
+//            javaFileWriter.flush();
+//            javaFileWriter.close();
+//            FileWriter jsonFileWriter = new FileWriter(jsonFile);
+//            jsonFileWriter.write(jsonStr.toString());
+//            jsonFileWriter.flush();
+//            jsonFileWriter.close();
+//            FileWriter sqlFileWriter = new FileWriter(sqlFile);
+//            sqlFileWriter.write(sqlStr.toString());
+//            sqlFileWriter.flush();
+//            sqlFileWriter.close();
         }
 
 
