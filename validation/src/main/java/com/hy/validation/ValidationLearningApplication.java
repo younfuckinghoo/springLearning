@@ -17,10 +17,7 @@ import java.util.Set;
 public class ValidationLearningApplication {
 
     public static void main(String[] args) throws IOException {
-
         PropertiesUtil.readProperties();
-
-
         SpringApplication.run(ValidationLearningApplication.class, args);
 
     }
