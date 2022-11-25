@@ -1,9 +1,10 @@
+
 server:
-  port: 8081
+  port: 8083
 
 spring:
   application:
-    name: producer-hy
+    name: consumer2-hy
 
   #Spring Cloud配置
   cloud:
@@ -32,7 +33,7 @@ spring:
 dubbo:
   cloud:
     #订阅服务
-    subscribed-services: consumer-hy,consumer2-hy
+    subscribed-services: producer-hy
   #扫描包
   scan:
     base-packages: com.hy
@@ -43,12 +44,12 @@ dubbo:
   # 注册中心地址
   registry:
     address: nacos://localhost:8848
-  provider:
-    filter: HyDubboProviderTraceFilter
+#  provider:
+#    filter: HyDubboProviderTraceFilter
   consumer:
     check: false
     timeout: 600000
-    filter: HyDubboConsumerTraceFilter
+#    filter: HyDubboConsumerTraceFilter
 
 
 
