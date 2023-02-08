@@ -18,6 +18,7 @@ public class ValidationLearningApplication {
 
     public static void main(String[] args) throws IOException {
         PropertiesUtil.readProperties();
+        PropertiesUtil.readClass();
         SpringApplication.run(ValidationLearningApplication.class, args);
 
     }
