@@ -34,7 +34,7 @@ public class PropertiesUtil {
     public static void readClass() throws IOException {
         ClassLoader classLoader = PropertiesUtil.class.getClassLoader();
         // 当有依赖多个jar包，且jar包中包含相同路径文件 则会读取到多个资源
-        Enumeration<URL> resources = classLoader.getResources("");
+        Enumeration<URL> resources = classLoader.getResources("com/hy/");
         while (resources.hasMoreElements()){
             URL url = resources.nextElement();
           
