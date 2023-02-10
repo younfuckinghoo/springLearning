@@ -1,5 +1,6 @@
 package com.hy.validation;
 
+import com.hy.basejava.util.ClassScanUtil;
 import com.hy.basejava.util.PropertiesUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,8 +18,9 @@ import java.util.Set;
 public class ValidationLearningApplication {
 
     public static void main(String[] args) throws IOException {
+
         PropertiesUtil.readProperties();
-        PropertiesUtil.readClass();
+        ClassScanUtil.readClass();
         SpringApplication.run(ValidationLearningApplication.class, args);
 
     }
