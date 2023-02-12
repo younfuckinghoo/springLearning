@@ -59,6 +59,7 @@
                     </excludes>
 
                 </configuration>
+                <!-- 当parent 为spring-boot-parent时可以不要，当用自己定义的parent时，必须使用repackage，如果不使用则依赖的jar包不会打到本项目的jar包中-->
                 <executions>
                     <execution>
                         <goals>
