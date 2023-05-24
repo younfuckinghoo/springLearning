@@ -30,6 +30,82 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <dependency-jar-path>lib</dependency-jar-path>
     </properties>
 
+    <!--以下配置为了打包之后测试包扫描-->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--                    <include>application-${env}.yml</include>-->
+                    <!--                    <include>application.yml</include>-->
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.factories</include>
+                    <include>static/</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!-- 添加classpath -->
+                            <addClasspath>true</addClasspath>
+                            <!-- 将依赖的jar包添加到classpath -->
+                            <classpathPrefix>${dependency-jar-path}/</classpathPrefix>
+                            <mainClass>com.hy.basejava.util.ClassScanUtil</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <!-- 依赖外置配置 -->
+
+            <!--打成一个jar包-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--将本项目打成jar包，将依赖的jar打到lib中-->
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/${dependency-jar-path}</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
+        </plugins>
+    </build>
 </project>
