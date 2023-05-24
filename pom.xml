@@ -16,6 +16,7 @@
         <module>io-learning</module>
         <module>base-java</module>
         <module>validation</module>
+        <module>demo</module>
     </modules>
     <dependencyManagement>
         <dependencies>

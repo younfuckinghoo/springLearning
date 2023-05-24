@@ -9,7 +9,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-
+/**
+* Description: 包扫描
+* @createDate: 2023/5/24 17:52
+* @author haoyong
+* @lastModifyBy haoyong
+*/
 public class ClassScanUtil {
 
     public static void readClass() throws IOException {
