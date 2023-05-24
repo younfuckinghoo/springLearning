@@ -58,28 +58,27 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <!-- 添加classpath -->
-                            <addClasspath>true</addClasspath>
-                            <!-- 将依赖的jar包添加到classpath -->
-                            <classpathPrefix>${dependency-jar-path}/</classpathPrefix>
-                            <mainClass>com.hy.basejava.util.ClassScanUtil</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
+
             <!-- 依赖外置配置 -->
 
             <!--打成一个jar包-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.8.RELEASE</version>
+
+                <configuration>
+                    <mainClass>com.hy.basejava.util.ClassScanUtil</mainClass>
+
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+
+                </configuration>
+                <!-- 当parent 为spring-boot-parent时可以不要，当用自己定义的parent时，必须使用repackage，如果不使用则依赖的jar包不会打到本项目的jar包中-->
                 <executions>
                     <execution>
                         <goals>
@@ -90,6 +89,22 @@
             </plugin>
             <!--将本项目打成jar包，将依赖的jar打到lib中-->
             <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            &lt;!&ndash; 添加classpath &ndash;&gt;
+                            <addClasspath>true</addClasspath>
+                            &lt;!&ndash; 将依赖的jar包添加到classpath &ndash;&gt;
+                            <classpathPrefix>${dependency-jar-path}/</classpathPrefix>
+                            <mainClass>com.hy.basejava.util.ClassScanUtil</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <version>3.2.0</version>
