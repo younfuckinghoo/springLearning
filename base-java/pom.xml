@@ -59,6 +59,7 @@
         </resources>
         <plugins>
             <!--编译插件-->
+            <!--在作为一个包提供给别人时应该将打包配置注释掉，这样在引用的时候就能获取到此包中的类，否则打包之后即便其他项目引用了也会报找不到类的错误-->
           <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
