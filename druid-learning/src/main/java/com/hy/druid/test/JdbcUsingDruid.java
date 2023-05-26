@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 import java.sql.*;
+import java.util.Objects;
 
 @Component
 public class JdbcUsingDruid {
@@ -23,9 +24,21 @@ public class JdbcUsingDruid {
             preparedStatement.setLong(2,116821l);
             ResultSet resultSet = preparedStatement.executeQuery();
             ResultSetMetaData metaData = resultSet.getMetaData();
+            int columnCount = metaData.getColumnCount();
+            for (int i = 1; i <= columnCount; i++) {
+                System.out.print(metaData.getColumnName(i)+"\t\t\t\t");
+            }
+            System.out.println();
             while (resultSet.next()) {
+                for (int i = 1; i <= columnCount; i++) {
 
-//
+                    String aNull = Objects.requireNonNullElse(resultSet.getObject(i), "null").toString();
+                    if (aNull.length()==0){
+                        aNull = "null";
+                    }
+                    System.out.print(aNull +"\t\t\t\t");
+                }
+                System.out.println();
             }
 
         } catch (SQLException throwables) {
