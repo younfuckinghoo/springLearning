@@ -1,0 +1,9 @@
+[2023-05-26 15:45:07] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting DruidLearningApplication on DESKTOP-8UGFAI3 with PID 8272 (D:\projects\hy\SpringLearning\druid-learning\target\classes started by Administrstor in D:\projects\hy\SpringLearning)
+[2023-05-26 15:45:07] INFO  org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2023-05-26 15:51:01] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting DruidLearningApplication on DESKTOP-8UGFAI3 with PID 31068 (D:\projects\hy\SpringLearning\druid-learning\target\classes started by Administrstor in D:\projects\hy\SpringLearning)
+[2023-05-26 15:51:01] INFO  org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2023-05-26 15:55:10] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting DruidLearningApplication on DESKTOP-8UGFAI3 with PID 39468 (D:\projects\hy\SpringLearning\druid-learning\target\classes started by Administrstor in D:\projects\hy\SpringLearning)
+[2023-05-26 15:55:10] INFO  org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2023-05-26 15:58:05] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting DruidLearningApplication on DESKTOP-8UGFAI3 with PID 3900 (D:\projects\hy\SpringLearning\druid-learning\target\classes started by Administrstor in D:\projects\hy\SpringLearning)
+[2023-05-26 15:58:05] INFO  org.springframework.boot.SpringApplication 651 logStartupProfileInfo - No active profile set, falling back to default profiles: default
+[2023-05-26 15:58:07] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started DruidLearningApplication in 2.342 seconds (JVM running for 6.249)

@@ -17,6 +17,7 @@
         <module>base-java</module>
         <module>validation</module>
         <module>demo</module>
+        <module>druid-learning</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -52,6 +53,13 @@
                 <artifactId>ojdbc7</artifactId>
                 <version>12.1.0.2</version>
             </dependency>
+            <!--没有必要还和当前springboot配置版本有冲突-->
+         <!--   <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.13</version>
+            </dependency>-->
+            <!--数据库连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -91,7 +99,17 @@
                 <artifactId>spring-boot-starter-validation</artifactId>
                 <version>2.3.8.RELEASE</version>
             </dependency>
-
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.31</version>
+            </dependency>
+            <!--日志-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>2.3.4.RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
