@@ -3,6 +3,7 @@ package com.hy.druid.test;
 import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.util.Objects;
 
@@ -40,7 +41,11 @@ public class JdbcUsingDruid {
                 }
                 System.out.println();
             }
+            PrintWriter logWriter = this.dataSource.getLogWriter();
+            ConnectionBuilder connectionBuilder = this.dataSource.createConnectionBuilder();
+            Connection connection1 = connectionBuilder.build();
 
+            logWriter.println();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

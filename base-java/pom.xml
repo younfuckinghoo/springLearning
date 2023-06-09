@@ -85,13 +85,13 @@
             <!-- 依赖外置配置 -->
 
             <!--打成一个jar包-->
-           <!-- <plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.8.RELEASE</version>
 
                 <configuration>
-                    <mainClass>com.hy.basejava.util.ClassScanUtil</mainClass>
+                    <mainClass>com.hy.basejava.http.HttpTest</mainClass>
 
                     <excludes>
                         <exclude>
@@ -101,7 +101,7 @@
                     </excludes>
 
                 </configuration>
-                &lt;!&ndash; 当parent 为spring-boot-parent时可以不要，当用自己定义的parent时，必须使用repackage，如果不使用则依赖的jar包不会打到本项目的jar包中&ndash;&gt;
+                <!-- 当parent 为spring-boot-parent时可以不要，当用自己定义的parent时，必须使用repackage，如果不使用则依赖的jar包不会打到本项目的jar包中-->
                 <executions>
                     <execution>
                         <goals>
@@ -109,7 +109,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
             <!--将本项目打成jar包，将依赖的jar打到lib中-->
             <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
