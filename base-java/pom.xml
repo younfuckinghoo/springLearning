@@ -56,6 +56,13 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+            <resource>
+                <directory>lib</directory>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
         </resources>
         <plugins>
             <!--编译插件-->

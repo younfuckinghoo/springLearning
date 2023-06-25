@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 @SupportedAnnotationTypes({"com.hy.basejava.lombok.Data"})
-@SupportedSourceVersion(SourceVersion.RELEASE_11)
+//@SupportedSourceVersion(SourceVersion.RELEASE_11)
 public class DataProcessor extends AbstractProcessor {
     @Override
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {

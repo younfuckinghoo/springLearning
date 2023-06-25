@@ -10,7 +10,8 @@ public class MethodStackTraceUtil {
     public static void main(String[] args) {
         StackTraceElement[] methodStackTrace = getMethodStackTrace();
         for (StackTraceElement traceElement : methodStackTrace) {
-            System.out.println(traceElement.getClassLoaderName() + ":" + traceElement.getClassName() + "#" + traceElement.getMethodName());
+
+//            System.out.println(traceElement.getClassLoaderName() + ":" + traceElement.getClassName() + "#" + traceElement.getMethodName());
         }
 
     }

@@ -18,6 +18,7 @@
         <module>validation</module>
         <module>demo</module>
         <module>druid-learning</module>
+        <module>saml-learning</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -110,6 +111,7 @@
                 <artifactId>spring-boot-starter-log4j2</artifactId>
                 <version>2.3.4.RELEASE</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <dependencies>
