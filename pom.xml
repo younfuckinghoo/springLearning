@@ -19,6 +19,10 @@
         <module>demo</module>
         <module>druid-learning</module>
         <module>saml-learning</module>
+        <module>nettyLearning</module>
+        <module>server</module>
+        <module>client</module>
+        <module>client</module>
     </modules>
     <dependencyManagement>
         <dependencies>
