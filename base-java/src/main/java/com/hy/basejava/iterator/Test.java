@@ -13,7 +13,7 @@ public class Test {
         Iterator<String> iterator = myIterable.iterator();
         while (iterator.hasNext()){
             String next = iterator.next();
-            if ("3".equals(next))
+            if ("3".equals(next) || "4".equals(next))
                 iterator.remove();
         }
         for (String s : myIterable) {

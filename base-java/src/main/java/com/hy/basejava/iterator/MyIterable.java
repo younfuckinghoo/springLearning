@@ -63,6 +63,8 @@ public class MyIterable implements Iterable<String>{
             // 当前索引的值正好是从0到当前索引所在数据长度-1
             System.arraycopy(integers,0,newIntegers,0,currentIndex);
             System.arraycopy(integers,currentIndex+1,newIntegers,currentIndex,newIntegers.length-currentIndex);
+            currentIndex--;
+            nextIndex--;
             iterable.setIntegers(newIntegers);
 //            Iterator.super.remove();
         }
