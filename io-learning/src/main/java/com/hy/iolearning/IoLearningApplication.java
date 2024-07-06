@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class IoLearningApplication {
 
     public static void main(String[] args) {
-        FileWatcherThread fileWatcherThread = new FileWatcherThread();
-        Thread thread = new Thread(fileWatcherThread);
-        thread.setDaemon(true);
-        thread.run();
+//        FileWatcherThread fileWatcherThread = new FileWatcherThread();
+//        Thread thread = new Thread(fileWatcherThread);
+//        thread.setDaemon(true);
+//        thread.run();
         SpringApplication.run(IoLearningApplication.class, args);
     }
 

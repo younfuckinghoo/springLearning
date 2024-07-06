@@ -17,6 +17,13 @@
         <module>io-learning</module>
         <module>base-java</module>
         <module>validation</module>
+        <module>demo</module>
+        <module>druid-learning</module>
+        <module>saml-learning</module>
+        <module>nettyLearning</module>
+        <module>server</module>
+        <module>client</module>
+        <module>client</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -90,6 +97,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-validation</artifactId>
                 <version>${spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.31</version>
+            </dependency>
+            <!--日志-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>2.3.4.RELEASE</version>
             </dependency>
 
         </dependencies>

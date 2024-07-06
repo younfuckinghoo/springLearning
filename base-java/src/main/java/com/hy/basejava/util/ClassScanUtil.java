@@ -9,7 +9,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-
+/**
+* Description: 包扫描
+* @createDate: 2023/5/24 17:52
+* @author haoyong
+* @lastModifyBy haoyong
+*/
 public class ClassScanUtil {
 
     public static void readClass() throws IOException {
@@ -26,7 +31,7 @@ public class ClassScanUtil {
                 String urlPath = url.getPath();
                 File file = new File(urlPath.substring(1));
                 String file1 = url.getFile();
-                String path = URLDecoder.decode(file1, StandardCharsets.UTF_8);
+                String path = URLDecoder.decode(file1, StandardCharsets.UTF_8.toString());
                 scanFile(file);
             }
 

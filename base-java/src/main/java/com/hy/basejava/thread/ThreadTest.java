@@ -13,7 +13,14 @@ public class ThreadTest {
 
 
     public static void main(String[] args)  {
-        runnableTest();
+//        runnableTest();
+        try {
+            callableTest();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -33,7 +40,8 @@ public class ThreadTest {
         }
         thread.suspend();
         myLogger.info("------------------------------"+resource.get());
-
+        myLogger.info("------------------------------taskCount:"+threadPoolExecutor.getCompletedTaskCount());
+        threadPoolExecutor.shutdown();
     }
 
     public static void callableTest() throws ExecutionException, InterruptedException {
@@ -48,10 +56,10 @@ public class ThreadTest {
         }
 
         for (Future<AtomicInteger> atomicIntegerFuture : futureList) {
-            atomicIntegerFuture.get();
+            myLogger.info("---------------123---------------"+atomicIntegerFuture.get());
         }
         myLogger.info("------------------------------"+resource.get());
-
+        threadPoolExecutor.shutdown();
 
     }
 
