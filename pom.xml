@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>11</java.version>
+        <spring.boot.version>3.3.1</spring.boot.version>
     </properties>
     <modules>
         <module>dubbo-learning</module>
@@ -27,12 +28,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-logging</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -43,14 +44,14 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc7</artifactId>
-                <version>12.1.0.2</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.oracle</groupId>-->
+<!--                <artifactId>ojdbc7</artifactId>-->
+<!--                <version>12.1.0.2</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
@@ -59,7 +60,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-data-jdbc</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <!--  <dependency>
                   <groupId>org.springframework.boot</groupId>
@@ -68,12 +69,12 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-websocket</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.kafka</groupId>
@@ -88,7 +89,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-validation</artifactId>
-                <version>2.3.8.RELEASE</version>
+                <version>${spring.boot.version}</version>
             </dependency>
 
         </dependencies>
